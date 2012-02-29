@@ -1,0 +1,18 @@
+<h2>Blogs</h2>
+<table>	
+	<% for blog in @blogs %>
+	<tr>
+		<td>
+			<%= blog.title %> | <%= link_to 'Edit', edit_blog_path(blog) %> | <%= link_to 'Delete',blog_path(blog), method: :delete, confirm: "Are you sure ?"  %>
+		</td>
+	</tr>
+	<tr>	
+		<td>
+			<%= blog.description %>
+		</td>
+	</tr>
+	<% end %>
+<tr>
+	<td> <%= link_to 'Create Blog', new_blog_path %> </td>
+</tr>
+</table>

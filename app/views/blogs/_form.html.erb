@@ -1,0 +1,23 @@
+<table>
+	<%= form_for @blog do |b| %>
+		<tr>
+			<td>
+				<%= b.label :title %> 
+			</td>
+			<td>
+				<%= b.text_field :title %>
+			</td>
+		</tr>
+		<tr>
+		<td>
+			<%= b.label :description %> 
+		</td>
+		<td>
+			<%= b.text_field :description %>
+		</td>
+		</tr>
+		<tr>
+			<td> <%= b.submit %> </td>
+		</tr>	
+	<% end %>
+</table>
